@@ -38,7 +38,10 @@ nav a.right {float: right;}
   nav a.right, 
   nav a {float: center;}
   nav a {position:unset;
-  top: 0;}
+    top: 0;}
+  #Sinopsis {
+    margin-top: 70px;
+  }
 }
 
 body {
