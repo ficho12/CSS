@@ -1,0 +1,91 @@
+var dvF = "";
+
+if(window.navigator.userAgent.toLowerCase().includes('mac') && 
+  window.navigator.userAgent.toLowerCase().includes('safari') && 
+  (window.innerWidth == 768 || window.innerWidth == 1024) &&
+  navigator.vendor.toLowerCase().includes("apple")){
+    var dvF = "1";
+}
+
+
+console.log('rms_1.58');
+window['rmsclient_36a33102ac02c8895d0f5bf25c8539fd'] = window.location.href;
+
+
+
+  window['rmsScriptUrl_36a33102ac02c8895d0f5bf25c8539fd'] = '//s4.richmediastudio.com/rmsCre/I25uPLheWD/?hasConsent=1&stid=0&adc=&cd='+encodeURIComponent(window['rmsclient_36a33102ac02c8895d0f5bf25c8539fd'])+'&rnd=36a33102ac02c8895d0f5bf25c8539fd'+'&mediaType='+'&rmsCont=36a33102ac02c8895d0f5bf25c8539fd&dvF=' + dvF +'&gdpr=1&gdpr_consent=CPVTWEAPVTWEAAHABBENCECsAP_AAH_AAAAAIltf_X__b3_j-_5_f_t0eY1P9_7_v-0zjhfdt-8N3f_X_L8X42M7vF36pq4KuR4Eu3LBIQdlHOHcTUmw6okVrzPsbk2cr7NKJ7PEmnMbO2dYGH9_n93TuZKY7______z_v-v_v____f_7-3_3__5_3---_e_V_99zLv9____39nP___9v-_9_____4IhgEmGpeQBdiWODJtGlUKIEYVhIdAKACigGFoisIHVwU7K4CfUELABCagIwIgQYgowYBAAIBAEhEQEgB4IBEARAIAAQAqwEIACNgEFgBYGAQACgGhYgRQBCBIQZHBUcpgQESLRQT2ViCUHexphCGWWAFAo_oqEBEoQQLAyEhYOY4AkBLhZIFmKF8gAAAAA.f_gAD_gAAAAA';
+
+window['rmsOOPContent_36a33102ac02c8895d0f5bf25c8539fd'] = document.createElement('script');
+window['rmsOOPContent_36a33102ac02c8895d0f5bf25c8539fd'].setAttribute('type', 'text/javascript');
+window['rmsOOPContent_36a33102ac02c8895d0f5bf25c8539fd'].setAttribute('src', window['rmsScriptUrl_36a33102ac02c8895d0f5bf25c8539fd']);
+
+window['rmsOOPtracking_36a33102ac02c8895d0f5bf25c8539fd'] = document.createElement('div');
+window['rmsOOPtracking_36a33102ac02c8895d0f5bf25c8539fd'].setAttribute('id', '36a33102ac02c8895d0f5bf25c8539fd');
+
+
+  try {
+     if (window == window.parent) {
+       if (typeof rms_oop_have_skin == 'undefined') {
+         var rms_oop_have_skin = true;
+         document.body.appendChild(window['rmsOOPContent_36a33102ac02c8895d0f5bf25c8539fd']);
+         document.body.appendChild(window['rmsOOPtracking_36a33102ac02c8895d0f5bf25c8539fd']);
+         console.log('rms_oop_have_skin: '+rms_oop_have_skin);
+       } else {
+         console.log('rms_oop_have_skin: '+rms_oop_have_skin);
+       }
+     } else {
+       targetIframe = null;
+       if(window.parent.window.parent != window.parent) {
+         targetIframe = window.parent.window.parent;
+         subTargetIframe = window.parent;
+       } else {
+         targetIframe = window.parent;
+         subTargetIframe = window;
+       }
+
+       if(targetIframe != targetIframe.window.parent){
+         subTargetIframe = targetIframe;
+         targetIframe = targetIframe.window.parent;
+       }
+
+              pnetFound = "";
+  	   var i,ifcnt=targetIframe.frames.length;
+  	   for(i = 0; i < ifcnt; i++) {
+    		 try {
+    			if (targetIframe.frames[i]==subTargetIframe.self) {
+    				pnetFound=i;break;
+    			}
+    		} catch(e) {}
+  	   }
+
+      	if (window.frameElement) {
+      		for(i = 0; i < ifcnt; i++){
+      			try {
+      				if(targetIframe.frames[pnetFound].frameElement===targetIframe.document.getElementsByTagName('IFRAME')[i]){
+      					pnetFound=i;break;
+      				}
+      			}catch(e){
+      			}
+      		}
+      	}
+      	pnetIframeExt = targetIframe.document.getElementsByTagName('IFRAME')[pnetFound];
+
+        if(typeof pnetIframeExt !== "undefined"){
+            pnetIframeExt.style.width = "0px";
+            pnetIframeExt.style.height = "0px";
+      	    pnetIframeExt.style.display = "none";
+        }
+
+        if (typeof targetIframe.rms_oop_have_skin == 'undefined') {
+          targetIframe.rms_oop_have_skin = true;
+          targetIframe.document.body.appendChild(window['rmsOOPContent_36a33102ac02c8895d0f5bf25c8539fd']);
+          targetIframe.document.body.appendChild(window['rmsOOPtracking_36a33102ac02c8895d0f5bf25c8539fd']);
+          console.log('rms_oop_have_skin: '+ targetIframe.rms_oop_have_skin);
+        } else {
+          console.log('rms_oop_have_skin: '+ targetIframe.rms_oop_have_skin);
+        }
+
+     }
+  } catch(e) {
+    console.log(e);
+  }

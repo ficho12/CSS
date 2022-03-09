@@ -1,0 +1,203 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="1641712900_599927_data_003/publishertag.js"></script><script async="" src="1641712900_599927_data_003/element-in-viewport.js"></script>
+<script async="" src="gpt.js"></script>
+<script async="" src="1641712900_599927_data_003/prebid6.js"></script>
+<script src="1641712900_599927_data_003/proxies.js"></script>
+<script>
+            initProxies();
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            var pbjs = pbjs || {};
+            pbjs.que = pbjs.que || [];
+            var PREBID_TIMEOUT = 2000;
+            var canRefresh = true;
+            var refreshCount = 0;
+            var maxRefreshCount = eval(true) ? 0 : 5;
+            function initAdserver() {
+                if (pbjs.initAdserverSet) return;
+                
+                elementInViewPort(document.getElementById("div-ub-gpt-ad-994941185589-0")).then(() => {
+                  if (canRefresh) {
+                    canRefresh = false;
+                    refreshCount ++;
+                    googletag.cmd.push(function() {
+                      pbjs.que.push(function() {
+                          pbjs.setTargetingForGPTAsync();
+                          googletag.pubads().refresh();
+                          setTimeout(() => {
+                            pbjs.initAdserverSet = false;
+                            canRefresh = true;
+                          }, 30000)
+                      });
+                    });
+                  }
+                })
+                pbjs.initAdserverSet = true;
+            }
+            // Load GPT when timeout is reached.
+            setTimeout(initAdserver, PREBID_TIMEOUT);
+            
+            var priceGranularity = {
+                "buckets": [
+                	{
+                        "precision": 2, //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
+                        "min": 0,
+                        "max": 5,
+                        "increment": 0.01
+                    },
+                    {
+                        "precision": 2,
+                        "min": 5,
+                        "max": 8,
+                        "increment": 0.05
+                    },
+                    {
+                        "precision": 2,
+                        "min": 8,
+                        "max": 20,
+                        "increment": 0.5
+                    },
+                    {
+                        "precision": 2,
+                        "min": 21,
+                        "max": 99,
+                        "increment": 1.00
+                    }
+                ]
+            };
+            pbjs.que.push(function() {
+              
+                pbjs.setConfig({
+                	priceGranularity,
+                	currency: {
+                     adServerCurrency: "EUR",
+                  },
+                	userSync: {
+                      syncEnabled: true,
+                      pixelEnabled: true,
+                      iframeEnabled: true,
+                  },
+                });
+                pbjs.setConfig({
+                    debug: false
+                });
+                
+                if ("GGZ5EXBXDQ") {
+                  pbjs.setConfig({
+                    schain: {
+                      validation: "strict",
+                      config: {
+                        ver:"1.0",
+                        complete: 1,
+                        nodes: [
+                          {
+                            asi: "unblockia.com",
+                            sid: "GGZ5EXBXDQ",
+                            hp: 1
+                          }
+                        ]
+                      }
+                    }
+                  });
+                }  
+                
+                if (false) {
+                  pbjs.setConfig({
+                      consentManagement: {
+                          cmpApi: 'iab',
+                          timeout: 8000,
+                      },
+                  })
+                }
+                var adUnits = [
+                    {
+                        code: '/21671350435,7811748/unblockia-native-as.com',
+                        mediaTypes: {
+                            banner: {
+                              sizes: [
+                                  [728, 90]
+                              ], 
+                            }  
+                        },
+                        bids: [{"bidder":"criteo","params":{"zoneId":"1593908"}}]
+                    }, {
+                        code: '/21671350435,7811748/unblockia-native-as.com',
+                        sizes: [
+                            [1, 1]
+                        ],
+                        mediaTypes: {
+                            native: {
+                              image: {
+                                  required: false,
+                                  sizes: [100, 50]
+                              },
+                              title: {
+                                  required: false,
+                                  len: 140
+                              },
+                              sponsoredBy: {
+                                  required: false
+                              },
+                              clickUrl: {
+                                  required: false
+                              },
+                              body: {
+                                  required: false
+                              },
+                              icon: {
+                                  required: false,
+                                  sizes: [40, 40]
+                              }
+                          }
+                        },
+                        bids: []
+                    }
+                ];
+                pbjs.addAdUnits(adUnits);
+                refreshBid();
+                
+                setInterval(() => {
+                  if (canRefresh && refreshCount > 0 && refreshCount <= maxRefreshCount) {
+                    refreshBid()
+                  }
+                }, 1000)
+                
+            });
+            
+            function refreshBid() {
+                pbjs.que.push(function() {
+                    pbjs.requestBids({
+                        timeout: PREBID_TIMEOUT,
+                        bidsBackHandler: function(bidResponses) {
+                            initAdserver(bidResponses);
+                        }
+                    });
+                });
+            }
+        </script>
+        <script>
+            // GPT setup
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/21671350435,7811748/unblockia-native-as.com', [[728,90]], 'div-ub-gpt-ad-994941185589-0').addService(googletag.pubads());
+                googletag.pubads().setForceSafeFrame(true);
+                googletag.pubads().disableInitialLoad();    
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+        </script>
+        <meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A8FHS1NmdCwGqD9DwOicnHHY+y27kdWfxKa0YHSGDfv0CSpDKRHTQdQmZVPDUdaFWUsxdgVxlwAd6o+dhJykPA0AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A8zdXi6dr1hwXEUjQrYiyYQGlU3557y5QWDnN0Lwgj9ePt66XMEvNkVWOEOWPd7TP9sBQ25X0Q15Lr1Nn4oGFQkAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A4/Htern2udN9w3yJK9QgWQxQFruxOXsXL7cW60DyCl0EZFGCSme/J33Q/WzF7bBkVvhEWDlcBiUyZaim5CpFQwAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><script src="1641712900_599927_data_003/pubads_impl_2022022801.js" async=""></script></head><body><div id="div-ub-gpt-ad-994941185589-0" style="width: 728px; height: 90px">
+            <script type="text/javascript">
+                googletag.cmd.push(function() {
+                    googletag.display('div-ub-gpt-ad-994941185589-0');
+                });
+                
+                var removeQueryIdInterval = setInterval(() => {
+                  var el = document.getElementById('div-ub-gpt-ad-994941185589-0')
+                  if (el.getAttribute('data-google-query-id')) {
+                    el.removeAttribute('data-google-query-id')
+                    clearInterval(removeQueryIdInterval)
+                  }
+                }, 1000)
+            </script>
+        <div id="google_ads_iframe_/21671350435,7811748/unblockia-native-as.com_0__container__" style="border: 0pt none; width: 728px; height: 0px;"></div></div>
+</body></html>

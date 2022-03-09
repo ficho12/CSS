@@ -1,0 +1,165 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+        function loadLabel() {
+            const label = document.createElement('div');
+            label.style.position = 'absolute';
+            label.style.bottom = '0';
+            label.style.left = '0';
+            label.style.width = '42px';
+            label.style.height = '30px';
+            label.style.textAlign = 'center';
+            label.style.color = 'black';
+            label.style.backgroundColor = 'rgb(253 253 255)';
+            label.style.paddingTop = '11px';
+            label.style.opacity = '0.9';
+            label.style.fontFamily = 'sans-serif';
+            label.innerText = '0';
+            document.body.appendChild(label)
+        }
+        
+        function loadCross() {
+            const label = document.createElement('div');
+            label.style.position = 'absolute';
+            label.style.top = '5px';
+            label.style.left = '5px';
+            label.style.width = '30px';
+            label.style.height = '30px';
+            label.style.background = 'rgba(0, 0, 0, 0.5)';
+            label.style.textAlign = 'center';
+            label.style.color = 'white';
+            label.style.opacity = '0.9';
+            label.style.fontFamily = 'sans-serif';
+            label.style.fontSize = '12px';
+            label.style.borderRadius = '50%';
+            label.style.cursor = 'pointer';
+            label.style.display = 'flex';
+            label.style.justifyContent = 'center';
+            label.style.alignItems = 'center';
+            label.innerText = 'X';
+            label.style.pointerEvents = 'none';
+            label.classList.add = 'close-label';
+            document.body.appendChild(label)
+        }
+        
+    </script>
+    <meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A8FHS1NmdCwGqD9DwOicnHHY+y27kdWfxKa0YHSGDfv0CSpDKRHTQdQmZVPDUdaFWUsxdgVxlwAd6o+dhJykPA0AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A8zdXi6dr1hwXEUjQrYiyYQGlU3557y5QWDnN0Lwgj9ePt66XMEvNkVWOEOWPd7TP9sBQ25X0Q15Lr1Nn4oGFQkAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A4/Htern2udN9w3yJK9QgWQxQFruxOXsXL7cW60DyCl0EZFGCSme/J33Q/WzF7bBkVvhEWDlcBiUyZaim5CpFQwAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><script src="../../pubads_impl_2022022801.js" async=""></script><link rel="preload" href="../../integrator.js" as="script"><script type="text/javascript" src="../../integrator.js"></script><link rel="preload" href="../../integrator_002.js" as="script"><script type="text/javascript" src="../../integrator_002.js"></script></head><body>
+        <script async="" src="../../mejores-juegos-2022_data_007/mejores-juegos-2022_data/gpt.js"></script>
+        <script async="" src="mejores-juegos-2022_data/prebid_v4_38.js"></script>
+        <script>
+            var PREBID_TIMEOUT = 3000;
+            var FAILSAFE_TIMEOUT = 3000;
+        
+            var sizes = [[300,250]];
+            var bids = {"code":"","mediaTypes":{"banner":{"sizes":[[300,250]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"17210","siteId":"201784","zoneId":"2088116","sizes":"15","position":"atf","referrer":"vidaextra.com"}},{"bidder":"criteo","params":{"zoneId":"1491572"}},{"bidder":"smartadserver","params":{"domain":"https://prg.smartadserver.com","siteId":"417472","pageId":"1392483","formatId":"71867"}},{"bidder":"appnexus","params":{"placementId":"21784602"}},{"bidder":"adform","params":{"mid":"1064228"}},{"bidder":"openx","params":{"unit":"544095524","delDomain":"adpone-d.openx.net"}},{"bidder":"pubmatic","params":{"publisherId":"156383","adSlot":"vidaextra.com_300x250_ATF_._it","kadpageurl":"vidaextra.com"}},{"bidder":"ix","params":{"siteId":"710430","size":[300,250]}},{"bidder":"between","params":{"w":"300","h":"250","s":"4111431"}}]};
+        
+            var adUnits = [
+                {
+                    code: '/21671350435,241667871/300x250-vidaextra.com_._it',
+                    sizes,
+                    mediaTypes: {
+                        banner: {
+                            sizes
+                        }
+                    },
+                    bids
+                },
+            ];
+        
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            googletag.cmd.push(function() {
+                googletag.pubads().disableInitialLoad();
+            });
+        
+            var pbjs = pbjs || {};
+            pbjs.que = pbjs.que || [];
+        
+            const cmpRequired = parseInt('true');
+            const priceGranularity = {
+                "buckets": [
+                    {
+                        "precision": 2,
+                        "min": 0,
+                        "max": 5,
+                        "increment": 0.01
+                    },
+                    {
+                        "precision": 2,
+                        "min": 5,
+                        "max": 8,
+                        "increment": 0.05
+                    },
+                    {
+                        "precision": 2,
+                        "min": 8,
+                        "max": 20,
+                        "increment": 0.5
+                    },
+                    {
+                        "precision": 2,
+                        "min": 21,
+                        "max": 99,
+                        "increment": 1.00
+                    }
+                ]
+            };
+        
+            pbjs.que.push(function() {
+        
+                if (cmpRequired) {
+                    pbjs.setConfig({
+                        consentManagement: {
+                            cmpApi: 'iab',
+                            timeout: 8000,
+                            allowAuctionWithoutConsent: true
+                        },
+                    })
+                }
+        
+                pbjs.setConfig({
+                    priceGranularity,
+                });
+        
+                pbjs.addAdUnits(adUnits);
+                pbjs.requestBids({
+                    bidsBackHandler: initAdserver,
+                    timeout: PREBID_TIMEOUT
+                });
+            });
+        
+            function initAdserver() {
+                if (false) {
+                    loadLabel()
+                }
+                
+                if (pbjs.initAdserverSet) return;
+                pbjs.initAdserverSet = true;
+                googletag.cmd.push( () => {
+                    pbjs.que.push( () => {
+                        pbjs.setTargetingForGPTAsync();
+                        googletag.pubads().refresh();
+                        const winnerBids = pbjs.getAllPrebidWinningBids()
+                        if (winnerBids.length) {
+                            loadCross()
+                        }
+                        
+                    });
+                });
+            }
+        
+            setTimeout(function() {
+                initAdserver();
+            }, FAILSAFE_TIMEOUT);
+        
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/21671350435,241667871/300x250-vidaextra.com_._it', [300, 250], 'div-gpt-ad-359122865531-0').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+        </script>
+        
+        <div id="div-gpt-ad-359122865531-0" data-google-query-id="CL2--ryVq_YCFU-B1Qodd38OQw">
+            
+        <div id="google_ads_iframe_/21671350435,241667871/300x250-vidaextra.com_._it_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/21671350435,241667871/300x250-vidaextra.com_._it_0" name="google_ads_iframe_/21671350435,241667871/300x250-vidaextra.com_._it_0" title="3rd party ad content" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom;" role="region" aria-label="Advertisement" tabindex="0" srcdoc="" data-google-container-id="o7ez6wh8bigg" data-load-complete="true" width="300" height="250" frameborder="0"></iframe></div></div>
+    
+<iframe src="../../mejores-juegos-2022_data_002/mejores-juegos-2022_data/aframe.html" style="display: none;" width="0" height="0"></iframe></body></html>
