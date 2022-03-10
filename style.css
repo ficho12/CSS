@@ -1,4 +1,17 @@
-body {margin: 0;}
+@font-face {
+  font-family: 'didact_gothicregular';
+  src: url('didactgothic-regular-webfont.woff2') format('woff2'),
+       url('didactgothic-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  max-width: 865px;
+	margin: 0px auto;}
+
+div{font-family: "didact_gothicregular";}
+
 
 nav {
   list-style-type: none;
@@ -26,6 +39,7 @@ nav a {
   padding: 14px 16px;
   text-decoration: none;
   color: black;
+  font-family: "didact_gothicregular"
 }
 
 nav a:hover:not(.active) {background-color: beige;}
@@ -34,13 +48,37 @@ nav a.active {background-color: #04AA6D;}
 
 nav a.right {float: right;}
 
-@media screen and (max-width: 600px) {
+#Sinopsis {
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 537px) {
   nav a.right, 
   nav a {float: center;}
   nav a {position:unset;
     top: 0;}
   #Sinopsis {
-    margin-top: 70px;
+    margin-top: 110px;
+  }
+}
+
+@media screen and (max-width: 323px) {
+  nav a.right, 
+  nav a {float: center;}
+  nav a {position:unset;
+    top: 0;}
+  #Sinopsis {
+    margin-top: 160px;
+  }
+}
+
+@media screen and (max-width: 223px) {
+  nav a.right, 
+  nav a {float: center;}
+  nav a {position:unset;
+    top: 0;}
+  #Sinopsis {
+    margin-top: 250px;
   }
 }
 
@@ -53,6 +91,8 @@ body {
 main {
   color: white;
 }
+
+
 
 h2 {
 	color: red;
