@@ -1,6 +1,170 @@
+@font-face{
+    font-family: 'didact_gothicregular';
+    src: url('didactgothic-regular-webfont.woff2') format('woff2'),
+            url('didactgothic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-h2 {
-	color: red;
-    font-family: helvetica;
-    font-size: 22px;
+*{
+    font-family: "didact_gothicregular";
+}
+
+body{
+    max-width: 865px;
+    margin: 0px auto;
+    background-color: #1d172c;
+    height: 125vh;
+    padding: 10px;
+}
+
+h2{
+    color:#F0FD4E;
+    font-family: didact_gothicregular;
+    font-size: 26px;
+}
+
+h3{
+    color:#F0FD4E;
+}
+
+hr{
+    color:#F0FD4E;
+    box-shadow: 0 0 25px 0 #F0FD4E;
+}
+
+div.section{
+    padding-top: 50px;
+}
+
+p.section_text{
+    color: white;
+}
+
+p.subsection_text{
+    color: white;
+}
+
+h3.need_title.main{
+    color:#F0FD4E;
+}
+
+h2.need_value.main{
+    color:white;
+}
+
+h3.need_title{
+    color:#F0FD4E;
+}
+
+p.need_value{
+    color:white;
+}
+
+.referencias{
+    background-color: #F0FD4E;
+    box-shadow: 0 0 25px 0 #F0FD4E;
+    color: black;
+}
+
+ol li {
+    counter-increment: contador
+}
+
+ol li:before {
+    content: counters(contador, '.') ' ';
+    color:#F0FD4E;
+    font-weight: bolder;
+    background-color: #5834B1;
+    border-radius: 50%;
+    padding-left: 4px;
+}
+
+ol {
+    list-style: none;
+    counter-reset: contador;
+}
+
+.referencias a {
+    color: black;
+}
+
+.referencias a:hover:not(.active) {background-color: #5834B1;
+    color: white;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.media{
+    width: 100%;
+    height: auto;
+}
+
+
+nav {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #F0FD4E;
+    box-shadow: 0 0 25px 0 #F0FD4E;
+    position: fixed;
+    z-index: 1;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "didact_gothicregular";
+}
+
+nav a:hover:not(.active) {background-color: #5834B1;
+    color: white;
+}
+
+nav a.right {float: right;}
+
+@media screen and (max-width: 537px) {
+    nav a.right, 
+    nav a {position:unset;
+        top: 0;}
+    div.section{
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 323px) {
+    nav a.right, 
+    nav a {position:unset;
+        top: 0;}
+    div.section{
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 223px) {
+    nav a.right, 
+    nav a {position:unset;
+        top: 0;}
+    div.section{
+        padding-top: 240px;
+    }
 }

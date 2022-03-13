@@ -33,58 +33,6 @@ hr{
   box-shadow: 0 0 25px 0 #5834B1;
 }
 
-nav {
-  list-style-type: none;
-  overflow: hidden;
-  background-color: #5834B1;
-  box-shadow: 0 0 25px 0 #5834B1;
-  position: fixed;
-  z-index: 1;
-}
-
-nav a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: "didact_gothicregular"
-}
-
-nav a:hover:not(.active) {background-color: #F0FD4E;
-  color: black;
-}
-
-nav a.right {float: right;}
-
-@media screen and (max-width: 537px) {
-  nav a.right, 
-  nav a {position:unset;
-    top: 0;}
-  div.section{
-    padding-top: 100px;
-  }
-}
-
-@media screen and (max-width: 323px) {
-  nav a.right, 
-  nav a {position:unset;
-    top: 0;}
-  div.section{
-    padding-top: 150px;
-  }
-}
-
-@media screen and (max-width: 223px) {
-  nav a.right, 
-  nav a {position:unset;
-    top: 0;}
-  div.section{
-    padding-top: 240px;
-  }
-}
-
 div.section{
   padding-top: 50px;
 }
@@ -157,4 +105,56 @@ ol {
 .media{
   width: 100%;
   height: auto;
+}
+
+nav {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #5834B1;
+  box-shadow: 0 0 25px 0 #5834B1;
+  position: fixed;
+  z-index: 1;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "didact_gothicregular";
+}
+
+nav a:hover:not(.active) {background-color: #F0FD4E;
+  color: black;
+}
+
+nav a.right {float: right;}
+
+@media screen and (max-width: 537px) {
+  nav a.right, 
+  nav a {position:unset;
+    top: 0;}
+  div.section{
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 323px) {
+  nav a.right, 
+  nav a {position:unset;
+    top: 0;}
+  div.section{
+    padding-top: 150px;
+  }
+}
+
+@media screen and (max-width: 223px) {
+  nav a.right, 
+  nav a {position:unset;
+    top: 0;}
+  div.section{
+    padding-top: 240px;
+  }
 }
