@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+<title>Fluid 3-col layout via CSS</title><style type="text/css">
+/* <![CDATA[ */
+
+  /* GENERIC STYLES */
+  body {
+    margin:0; padding:0;
+    font:.75em/1.5 sans-serif;
+    }
+
+  h4  {
+    font-size: 1em;
+    }
+
+  .column-in {
+    margin:0; padding:10px;
+    }
+
+  .cleaner {
+    clear:both;
+    height:1px;
+    font-size:1px;
+    border:none;
+    margin:0; padding:0;
+    background:transparent;
+    display:none;
+    }
+
+  /* THE DIV TO TABLE TECHNIQUE */
+
+  #container {
+    width: 80%;
+    padding:0;
+    display: table;
+    border: 1px solid black;
+    }
+
+  #row  {
+    display: table-row;
+    }
+
+  #left {
+    width:150px;
+    padding:0;
+    background: #EEF;
+    display: table-cell;
+    background:yellow url("red.gif") top left repeat-y;
+    }
+
+  #right {
+    width:150px;
+    background:#FEE;
+    display: table-cell;
+    background:#FEE url("blue.gif") top right repeat-y;
+    }
+
+  #middle {
+    padding: 10px;
+    background:yellow;
+    display: table-cell;
+    }
+
+    /* IE ONLY */
+  * html #container {
+    background:yellow url("red.gif") top left repeat-y;
+    }
+  * html #row {
+    background:url("blue.gif") top right repeat-y;
+    }
+  * html #left {
+    float:left;
+    }
+  * html #right {
+    float:right;
+    }
+  * html #middle {
+    float: left;
+    width: expression((document.body.clientWidth * 0.8 - 322) + "px");
+    }
+  * html .cleaner {
+    display:block;
+    }
+
+/* ]]> */
+</style>
+
+</head>
+
+<body>
+
+<div id="header"><div class="column-in">
+  <p><a href="http://www.snook.ca/archives/000177.html">Return to article</a></p>
+</div></div>
+
+<div id="container"><div id="row">
+
+  <div id="left"><div class="column-in">
+    <h4>Left Col</h4>
+    <p id="lccont">
+      Lorem
+ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum rutrum,
+urna eget gravida auctor, mauris neque tempus lorem, non condimentum
+sem purus et eros. Donec non lectus. Phasellus eu massa. Praesent felis
+metus, tempor a, vehicula ut, interdum id, libero. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit. Cras nec est. Nulla facilisi.
+Integer a dolor. Duis vitae diam. Morbi laoreet tellus ut diam.
+Vestibulum lacinia congue nunc.
+    </p>
+  </div></div>
+
+  <div id="middle"><div class="column-in">
+    <h4>Middle Col</h4>
+    <p id="mccont">
+      Lorem
+ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum rutrum,
+urna eget gravida auctor, mauris neque tempus lorem, non condimentum
+sem purus et eros. Donec non lectus. Phasellus eu massa. Praesent felis
+metus, tempor a, vehicula ut, interdum id, libero. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit. Cras nec est. Nulla facilisi.
+Integer a dolor. Duis vitae diam. Morbi laoreet tellus ut diam.
+Vestibulum lacinia congue nunc.
+    </p>
+  </div></div>
+
+  <div id="right"><div class="column-in">
+    <h4>Right Col</h4>
+    <p id="rccont">
+      Lorem
+ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum rutrum,
+urna eget gravida auctor, mauris neque tempus lorem, non condimentum
+sem purus et eros. Donec non lectus. Phasellus eu massa. Praesent felis
+metus, tempor a, vehicula ut, interdum id, libero. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit. Cras nec est. Nulla facilisi.
+Integer a dolor. Duis vitae diam. Morbi laoreet tellus ut diam.
+Vestibulum lacinia congue nunc.
+    </p>
+  </div></div>
+
+
+
+
+  <div class="cleaner">&nbsp;</div>
+
+</div></div>
+
+
+</body></html>
